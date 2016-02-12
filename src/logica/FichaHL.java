@@ -37,7 +37,7 @@ public  final class FichaHL extends Ficha {
         return 2;
     }
 
-  
+    //TRABAJAR EN ESTE METODO
     public boolean movimiento(Ficha f) {
         boolean resp = false;
         if(f instanceof EspacioVacio){
