@@ -20,18 +20,39 @@ public  final class FichaHL extends Ficha {
         escudo = 2;
         nombre = "Hombre Lobo";
     }
-
+    public FichaHL(int vida, int ataque, int escudo, int fila , int col, String color, String nombre, String iconos){
+        this.vida = vida;
+        this.ataque = ataque;
+        this.escudo = escudo;
+        this.fila = fila;
+        this.columna = col;
+        this.color = color;
+        this.nombre = nombre;
+        this.iconos = iconos;
+    }
+    
+    
     @Override
     public int atacarEs() {
         return 2;
     }
 
-    @Override
+  
     public boolean movimiento(Ficha f) {
         boolean resp = false;
         if(f instanceof EspacioVacio){
-            resp = true;
             
+            
+            int d = f.getFila() - this.fila;
+            if(d >= 2 || d <= -2){
+                
+            }
+            int filaSig = f.getFila();
+            int colSig = f.getColumna();
+            resp = true;
+            f = new FichaHL(vida,  ataque,  escudo,  filaSig ,  colSig , color, nombre, iconos);
+
+
             return resp;    
         }   
         return resp;

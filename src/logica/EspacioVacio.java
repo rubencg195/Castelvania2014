@@ -11,6 +11,11 @@ package logica;
  */
 public class EspacioVacio extends Ficha {
 
+    public EspacioVacio() {
+
+    }
+
+   
     @Override
     public int atacarEs() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -20,5 +25,7 @@ public class EspacioVacio extends Ficha {
     public boolean movimiento(Ficha f) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+ 
+
 }

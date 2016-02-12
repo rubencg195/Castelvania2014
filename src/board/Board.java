@@ -13,6 +13,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import logica.EspacioVacio;
+import logica.*;
 
 /**
  *
@@ -22,7 +24,7 @@ public class Board extends JFrame{
     
     panelImagen panel  = new panelImagen();
     panelImagen panel2  = new panelImagen();
-    JLabel[] labels = new JLabel[36];
+    Ficha[][] labels = new Ficha[6][6];
     
     public Board() throws HeadlessException {
         super(" CASTELVANIA GAME----RUBEN CHEVEZ  V 1.0");
@@ -40,9 +42,12 @@ public class Board extends JFrame{
         panel2.setSize(650, 650);
         panel2.setLocation(315, 20);
         
-        for(int c = 0; c < 36; c++){
-            labels[c] = new JLabel();
-            panel2.add(  labels[c] );
+        for(int i = 0; i < 6; i++){
+            for(int j = 0; j < 6 ; j++){
+                labels[i][j] = new EspacioVacio();
+                panel2.add(  labels[i][j] );
+            }
+            
         }
 
         setLocationRelativeTo(null);
